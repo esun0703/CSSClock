@@ -77,6 +77,25 @@
   </style>
 
   <script>
+    const secondHand = document.querySelector('.second-hand');
+    function setDate(){
+      const now = new Date();
+      // seconds
+      const seconds = now.getSeconds();
+      const secondsDegrees = ((seconds/60)*360)+90;
+      secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+      console.log("seconds", seconds);
+
+      // minutes
+      const minutes = now.getMinutes();
+      const minutesDegrees = ((minutes/60)*360)+90;
+      console.log("minutes", minutes);
+
+
+      // Hour
+    }
+
+    setInterval(setDate,1000);
 
 
   </script>
